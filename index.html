@@ -13,9 +13,6 @@
 </head>
 <body>
     <header>
-        <div>
-
-        </div>
         <ul>
             <li> 
                 <a target="_blank" href="https://github.com/Tuanassf/">Github</a>
@@ -35,18 +32,18 @@
                 <h5>Full Stack Developer</h5>
             </div>
 
-            <div id="arrow">
-                <i class="fa-solid fa-sort-down"></i>
+            <div onClick= displayAbout() id="arrow">
+                <i id= "animation" class="fa-solid fa-sort-down"></i>
             </div>
 
-            <div id="about">
+            <div style="display: none;"id="about">
                 <p>Me chamo Tuana sou formada em enfermagem e trabalhei na hotelaria durante 4 anos com atendimento ao cliente. Hoje estudo
                     desenvolvimento web e pretendo migrar de carreira. Adoro aprender novas coisas a todo momento! Tenho conhecimentos em HTML, CSS, JS, React,
                     Node.js, MySql, MongoDB...
                 </p>
             </div>
 
-            <div form="form">
+            <div class="form">
                 <div>
                     <p>Deixe seu contato!</p>
                 </div>
@@ -57,5 +54,14 @@
             </div>
         </section>
     </main>
+
+    <script>
+        function displayAbout() {
+            var arrow = document.getElementById('animation')
+            arrow.classList.toggle('rotate')
+            var display = document.getElementById('about')
+            display.classList.toggle('active')
+        }
+    </script>
 </body>
 </html>

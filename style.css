@@ -10,6 +10,7 @@ ul {
     list-style: none;
     font-style: italic;
     font-weight: 700;
+    font-size: larger;
 }
 
 a {
@@ -22,14 +23,119 @@ body {
     background-position: center center fixed;
     background-size: cover;
 }
+.header {
+    margin-block: 50%;
+    box-shadow: 1px 1px 10px 1px #ffff;
+    border-bottom: 45px;
+}
+header ul {
+    margin: 50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    box-shadow: 2px 10px 10px 1px #ffff;
+    
+    
+}
+
+header ul li a:hover {
+    transition: 300ms;
+}
+header ul li a:hover {
+    color:#c0a717
+}
 .container {
     text-align: center;
 }
 
 .container .name h1 {
-    font-size: 40px;
+    font-size: 50px;
 }
 
 .container .name h5 {
-    font-size: 20px;
+    font-size: 25px;
+}
+
+#arrow {
+    font-size: 35px;
+    cursor: pointer;
+    animation: blink 1s steps(5, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+#animation {
+    transition: 300ms;
+}
+.rotate {
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+
+.active {
+    display: block !important;
+}
+
+#about p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.form input {
+    width: 50%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.form button {
+    width: 15%;
+    padding: 5px 10px;
+    background: linear-gradient(to right#c09717 50%, #9c551b 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    color: #464646;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px 5px 5px 0px;
+    margin-top: 20px;
+    margin-left: -5px;
+
+}
+
+.form button:hover {
+    background-color: #9c551b;
+    color: #fff;
+    transition: 300ms;
+}
+
+@media only screen and (max-width: 820px) {
+    .form {
+        width: 100%;
+    }
+
+@media only screen and (max-width: 480px) {
+    .container .name h1 {
+        font-size: 30px;
+    }
+    
+    .container .name h5 {
+        font-size: 15px;
+    }
+    
+    #about p {
+        max-width: 80%;
+        text-align: justify;
+    }
 }
